@@ -11,7 +11,7 @@ def main():
 
         # Check if the input is non-negative
         if num < 0:
-            print("Please enter a non-negative integer.")
+            print("Please enter a non-negative integer Thank you.")
         else:
             result = factorial(num)
             print("The factorial of {} is: {}".format(num, result))
