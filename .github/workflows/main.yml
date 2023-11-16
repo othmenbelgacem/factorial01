@@ -28,7 +28,7 @@ jobs:
         name: Build and push
         uses: docker/build-push-action@v3
         with:
-          context: ./sources
-          file: ./sources/Dockerfile
+          context: ./dockerfile
+          file: ./dockerfile
           push: true
-          tags: namespace/name-repositorie:1.0.${{github.run_number}}
+          tags: othmenbelgacem/factorial:1.0.${{github.run_number}}
