@@ -9,26 +9,21 @@ jobs:
   docker:
     runs-on: ubuntu-latest
     steps:
-      -
-        name: Set up QEMU
+      - name: Set up QEMU
         uses: docker/setup-qemu-action@v2
-      -
-        name: Set up Docker Buildx
+      - name: Set up Docker Buildx
         uses: docker/setup-buildx-action@v2
-      -
-        name: Login to DockerHub
+      - name: Login to DockerHub
         uses: docker/login-action@v2
         with:
           username: ${{ secrets.USERNAME }}
           password: ${{ secrets.TOKEN }}
-      - 
-        name: Check
+      - name: Check
         uses: actions/checkout@v2
-      -      
-        name: Build and push
+      - name: Build and push
         uses: docker/build-push-action@v3
         with:
           context: ./dockerfile
           file: ./dockerfile
           push: true
-          tags: othmenbelgacem/factorial:1.0.${{github.run_number}}
+          tags: othmenbelgacem/factorial:1.0.${{ github.run_number }}
