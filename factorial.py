@@ -9,7 +9,7 @@ def main():
         # Get user o input for the number
         num = int(input("Enter a non-negative integer: "))
 
-        # Check if the input is non-negative
+        # Check if the input test is non-negative
         if num < 0:
             print("Please enter a non-negative integer Thank you.")
         else:
