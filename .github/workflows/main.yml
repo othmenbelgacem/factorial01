@@ -1,5 +1,3 @@
-name: Update the container calculator
-
 on:
   push:
     branches:
